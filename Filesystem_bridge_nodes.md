@@ -141,3 +141,73 @@ Ensure that your filesystem (EXT4 or ZFS) is configured correctly and verify the
 sudo zpool status
 sudo tune2fs -l /dev/sdX
 ```
+
+--------------------
+
+## Adjusting Memory Usage for ZFS
+
+If you need to optimize ZFS memory consumption, you can adjust some parameters:
+
+### Step 1: Limit the ARC Size
+
+You can set a maximum limit for the ARC cache by editing `/etc/modprobe.d/zfs.conf`:
+
+```bash
+options zfs zfs_arc_max=<size_in_bytes>
+```
+
+For example, to limit it to 16 GB:
+
+```bash
+options zfs zfs_arc_max=17179869184
+```
+
+### Step 2: Apply Changes Without Restarting
+
+If you cannot unload the ZFS module, you can dynamically adjust the ARC size:
+
+1. Set a new ARC limit dynamically:
+   ```bash
+   echo 17179869184 | sudo tee /sys/module/zfs/parameters/zfs_arc_max
+   ```
+   This sets the ARC limit to 16 GB (17179869184 bytes) immediately.
+
+2. Verify the change:
+   ```bash
+   cat /proc/spl/kstat/zfs/arcstats | grep c_max
+   ```
+   It should now display `17179869184`.
+
+3. Make it persistent:
+   Ensure the following line is in `/etc/modprobe.d/zfs.conf`:
+   ```bash
+   options zfs zfs_arc_max=17179869184
+   ```
+
+4. Reboot when possible:
+   The change in `/etc/modprobe.d/zfs.conf` will only take effect after a system restart.
+
+### Step 3: Test with a Smaller ARC
+
+To test with a smaller ARC size, for example, 8 GB:
+
+```bash
+echo 8589934592 | sudo tee /sys/module/zfs/parameters/zfs_arc_max
+```
+
+Verify the new limit:
+
+```bash
+cat /proc/spl/kstat/zfs/arcstats | grep c_max
+```
+
+---
+
+## Final Verification
+
+Ensure that your filesystem (EXT4 or ZFS) is configured correctly and verify the setup using:
+
+```bash
+sudo zpool status
+sudo tune2fs -l /dev/sdX
+```
