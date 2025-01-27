@@ -129,6 +129,7 @@ Verify the mount:
 df -h
 ls /mnt/data
 ```
+![image](https://github.com/user-attachments/assets/c0e56391-0fd3-4f10-b7cf-0caba6679cff)
 
 ---
 
