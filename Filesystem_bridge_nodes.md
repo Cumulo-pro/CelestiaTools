@@ -73,7 +73,7 @@ sudo journalctl -xe
 
 ## Setting Up ZFS for Bridge Nodes
 
-If you have a 17.5 TB disk without any partitions, a good approach is to use it with ZFS for efficient storage management. Follow these steps to set up `/dev/sdb` for your Bridge node:
+If you have a disk without any partitions, a good approach is to use it with ZFS for efficient storage management. Follow these steps to set up `/dev/sdb` for your Bridge node:
 
 ### Step 1: Create a New Partition on `/dev/sdb`
 
