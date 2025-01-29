@@ -1,4 +1,4 @@
-# Configuring a Filesystem for Bridge Nodes
+# Configuring a ZFS Filesystem for Bridge Nodes
 
 ## Introduction
 
