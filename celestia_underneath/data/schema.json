@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Celestia Underneath – Project Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "proyect",
+      "type",
+      "status",
+      "web",
+      "whycelestia",
+      "whoare",
+      "ecosystem",
+      "built_on"
+    ],
+    "properties": {
+      "proyect": {
+        "type": "string",
+        "minLength": 1
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "ai",
+          "defi",
+          "gaming",
+          "nft",
+          "social",
+          "oracle",
+          "infra",
+          "layer",
+          "tools"
+        ]
+      },
+      "sub_type": {
+        "type": "string",
+        "maxLength": 40
+      },
+      "status": {
+        "type": "string",
+        "enum": ["active", "testnet", "mainnet", "inactive"]
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "uniqueItems": true
+      },
+      "web": {
+        "type": "string",
+        "format": "uri"
+      },
+      "twitter": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_]{1,15}$"
+      },
+      "whycelestia": {
+        "type": "string",
+        "format": "uri"
+      },
+      "whoare": {
+        "type": "string",
+        "minLength": 10
+      },
+      "ecosystem": {
+        "type": "string",
+        "enum": [
+          "ethereum",
+          "cosmos",
+          "bitcoin",
+          "sovereign",
+          "modular",
+          "multichain",
+          "solana",
+          "other-l1"
+        ]
+      },
+      "built_on": {
+        "type": "string",
+        "enum": [
+          "rollkit",
+          "initia",
+          "op-stack",
+          "arbitrum-orbit",
+          "cosmos-sdk",
+          "polygon-cdk",
+          "zk-custom",
+          "bvm",
+          "solana-vm",
+          "other"
+        ]
+      },
+      "img": {
+        "type": "string",
+        "pattern": "^[-a-zA-Z0-9_]+\\.(png|jpe?g|svg)$"
+      },
+      "github": {
+        "type": "string",
+        "format": "uri"
+      },
+      "docs": {
+        "type": "string",
+        "format": "uri"
+      },
+      "celenium": {
+        "type": "string",
+        "format": "uri"
+      },
+      "articles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "url"],
+          "properties": {
+            "title": { "type": "string", "minLength": 3 },
+            "url":   { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    }
+  }
+}
