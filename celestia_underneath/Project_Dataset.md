@@ -20,7 +20,7 @@
     "web": "https://citrea.xyz/", // Canonical URL         🔹 required (uri)
     "twitter": "citrea_xyz",      // Handle, no @          optional
     "whyCelestia": "…",           // Tweet/blog explaining Celestia use 🔹 required
-    "description": "…",           // ≤ 280 chars summary   🔹 required
+    "whoare": "…",                // ≤ 280 chars summary   🔹 required
 
     "ecosystem": "bitcoin",       // Community / L1 hub    🔹 required (enum)
     "builtOn": "zk-custom",       // Underlying stack      🔹 required (enum)
