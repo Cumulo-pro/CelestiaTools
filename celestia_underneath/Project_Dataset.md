@@ -1,7 +1,5 @@
 # Celestia Underneath — Project Dataset
 
-> **Path:** `data/projects.json`
->
 > A machine‑readable catalogue of all the projects building **on, with or under** Celestia’s modular data‑availability layer.
 > It is the single source of truth consumed by the public dashboard, the OpenAPI endpoint and community scripts.
 
