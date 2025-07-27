@@ -34,7 +34,7 @@
 ]
 ```
 
-*Each object must follow the JSON Schema in `data/schema.json`.  
+*Each object must follow the [JSON Schema](https://github.com/Cumulo-pro/CelestiaTools/blob/main/celestia_underneath/data/schema.json) in `data/schema.json`.  
 Empty strings are **forbidden**—omit the key instead.*
 
 ---
