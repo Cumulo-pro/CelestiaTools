@@ -6,7 +6,7 @@
     "type": "object",
     "additionalProperties": false,
     "required": [
-      "proyect",
+      "project",
       "type",
       "status",
       "web",
@@ -16,7 +16,7 @@
       "built_on"
     ],
     "properties": {
-      "proyect": {
+      "project": {
         "type": "string",
         "minLength": 1
       },
