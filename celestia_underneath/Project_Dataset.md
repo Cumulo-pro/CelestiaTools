@@ -14,7 +14,6 @@
   {
     "project": "Citrea",          // Human‑readable name  🔹 required
     "type": "layer",              // High‑level category  🔹 required (enum)
-    "subType": "zk-rollup",       // Extra granularity      optional
     "status": "testnet",          // active | testnet …   🔹 required
     "tags": ["bitcoin","zk"],     // Free‑form labels       optional
 
@@ -28,7 +27,6 @@
 
     "img": "citrea.jpg",          // Relative asset path    optional
     "github": "https://…",        // Org or repo           optional
-    "docs": "https://…",          // Dev docs              optional
     "celenium": "https://…",      // Blob explorer link    optional
 
     "articles": [                 // Extra reading         optional
