@@ -50,11 +50,11 @@ Empty strings are **forbidden**—omit the key instead.*
 | `status` | `string(enum)` | `active`, `testnet`, `mainnet`, `inactive`. |
 | `web` | `uri` | Landing page. |
 | `whyCelestia` | `uri` | First‑party source confirming Celestia usage. |
-| `description` | `string` | One‑liner (≤ 280 chars). |
+| `whoare` | `string` | One‑liner (≤ 280 chars). |
 | `ecosystem` | `string(enum)` | Main community / L1. |
 | `builtOn` | `string(enum)` | SDK / stack. |
 
-Optional keys: `subType`, `tags[]`, `twitter`, `img`, `github`, `docs`, `celenium`, `articles[]`.
+Optional keys: `tags[]`, `twitter`, `img`, `github`, `docs`, `celenium`, `articles[]`.
 
 ---
 
